@@ -8,28 +8,27 @@
     <title>Weather-App</title>
 </head>
 <body class="bg-gradient-to-r from-[#5F6DF2] to-[#95BEF4] text-white">
-    <header class="text-center p-4">
-        <div class="text-gray-100 flex justify-end">
-            <input type="text" name="" placeholder="Search for a city" id="city" class="rounded-lg bg-gray-200/25 text-gray-800 p-0.5 px-1 w-full md:w-20">
-            <input type="submit" value="submit" id="btn" class="">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </input>
+    <header class="text-center p-4 container mx-auto">
+        <div class="grid grid-cols-3 gap-2">
+            <input type="text" name="" placeholder="Search for a City" id="city" class="bg-blue-200 text-bold col-span-2 text-center rounded-lg p-2">
+            <input type="submit" value="Search" id="btn" class="col-span-1 bg-blue-400 rounded p-2 border-2 border-blue-300 hover:border-blue-200"></input>
         </div>
         <div>
-            <p class="text-xl" id="locations">Thane</p>
+            <p class="text-4xl p-2" id="locations">--</p>
             <p class="text-gray-300" id="date">Thu 5 December 8:41am</p>
         </div>
         <div>
             <h1 class="leading-normal text-[6rem]">
                 <i id="icon"></i>
-                <p id="temperature">27°</p>
+                <p id="temperature">--</p>
             </h1>
         </div>
         <div class="text-xl">
-            <p id="feels-like">34/26 Feels like 30</p>
-            <p id="weather-description">Cloudy</p>
+            <p id="feels-like" class="p-2">--</p>
+            <p id="weather-description">--</p>
+        </div>
+        <div class="p-4">
+            <img src="" alt="" id="icon">icon
         </div>
     </header>
 
@@ -37,8 +36,8 @@
         <div class="px-20 rounded-lg text-xl grid grid-cols-1 md:grid-cols-2">
             <p>Humidity: <span id="humidity">--</span></p>
             <p>Wind: <span id="wind">--</span></p>
-            <p>Country: <span id="country">--</span></p>
             <p>Pressure: <span id="pressure">--</span></p>
+            <p>Country: <span id="country">--</span></p>
             
         </div>
     </section>
@@ -46,7 +45,7 @@
 
 
 
-<footer class="bg-gray-200/25 text-center mt-8 w-full absolute bottom-0 p-4">
+<footer class="bg-gray-200/25 text-center mt-8 w-full p-4 absolute bottom-0">
     <p>michaellouiemariano@gmail.com</p>
     <p>Copyright 2021</p>
 </footer>

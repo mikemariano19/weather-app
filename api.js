@@ -12,10 +12,6 @@ let country = document.querySelector('#country');
 let pressure = document.querySelector('#pressure');
 
 
-var today = new Date();
-var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-var dateTime = date+' '+time;
 
 
 btn.addEventListener('click', function(data){
@@ -30,25 +26,28 @@ btn.addEventListener('click', function(data){
         dates.innerHTML = dateTime;
 
 
+
         let temperatureData = Math.abs(data['main']['temp']-273.15).toPrecision(3)+'°';
         let feelsLikeData = 'Feels like' + ' ' + Math.abs(data['main']['feels_like']-273.15).toPrecision(3)+'°';
-        let weatherDescriptionData = data['weather']['0']['main'];
+        let weatherDescriptionData = data['weather']['0']['description'];
         let locationsData = data['name'];
-        // let humidityData = data['weather']['0']['humidity'];
-        // let windData = data['weather']['wind'];
-        // let countryData = data['sys']['country'];
-        // let pressureData = data['main']['pressure'];
+        let humidityData = data['main']['humidity'];
+        let windData = data['wind']['speed'];
+        let countryData = data['sys']['country'];
+        let pressureData = data['main']['pressure'];
+        // let iconData = data['main']['0']['icon'];
         
         
 
         temperature.innerHTML = temperatureData.toUpperCase();
         feelsLike.innerHTML = feelsLikeData;
-        weatherDescription.innerHTML = weatherDescriptionData;
+        weatherDescription.innerHTML = weatherDescriptionData.toUpperCase();
         locations.innerHTML = locationsData.toUpperCase();
-        // humidity.innerHTML = humidityData.toUpperCase();
-        // wind.innerHTML = windData;
-        // country.innerHTML = countryData;
-        // pressure.innerHTML = pressureData;
+        humidity.innerHTML = humidityData;
+        wind.innerHTML = windData;
+        country.innerHTML = countryData;
+        pressure.innerHTML = pressureData;
+        // icon.innerHTML = 'http://openweathermap.org/img/wn/'+iconData+'.png';
 
         
         
