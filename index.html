@@ -7,78 +7,82 @@
     <link rel="stylesheet" href="./build/styles.css">
     <title>Weather-App</title>
 </head>
-<body class="text-white font-nunito max-w-6xl mx-auto px-1 pt-2 bg-auto bg-no-repeat bg-center opacity-90" style="background-image: url(./src/img/nature\ bg.jpg)">
-    <header class="text-center container mx-auto">
-        <div class="grid grid-cols-3 gap-2">
-            <input type="text" name="" placeholder="Search for a City" id="city" class="bg-white/50 text-black uppercase text-bold col-span-2 text-center rounded-lg p-2">
-            <input type="submit" value="Search" id="btn" class="col-span-1 bg-blue-400 rounded border-2 border-blue-300 hover:border-blue-200"></input>
-        </div>
-        <div>
-            <p class="text-4xl p-2" id="locations">--</p>
-            <p class="text-gray-300" id="date">Thu 5 December 8:41am</p>
-        </div>
-        <div>
-            <h1 class="leading-normal text-[6rem]">
-                <i id="icon"></i>
-                <p id="temperature">--</p>
-            </h1>
-        </div>
-        <div class="text-xl">
-            <p id="feels-like" class="p-2">--</p>
-            <p id="weather-description">--</p>
-        </div>
-        <div class="p-4">
-            <img src="" alt="" id="icon">icon
-        </div>
-    </header>
-
-    <!-- <section class="bg-gray-200/25 md:text-center mt-8 container mx-auto">
-        <div class="px-20 rounded-lg text-xl grid grid-cols-1 md:grid-cols-2">
-            <p>Humidity: <span id="humidity">--</span></p>
-            <p>Wind: <span id="wind">--</span></p>
-            <p>Pressure: <span id="pressure">--</span></p>
-            <p>Country: <span id="country">--</span></p>
-            
-        </div>
-    </section> -->
-
-    <div class="container mx-auto text-center">
-        <div class="bg-blue-400 rounded h-full">
-            <div class="">
-                <p class="text-md font-semibold tracking-widest">HUMIDITY</p><span class="text-xl font-semibold" id="humidity">--</span>
+<body class="text-white font-nunito max-w-6xl mx-auto px-1 pt-2 bg-auto bg-no-repeat bg-center bg-cover" style="background-image: url(./src/img/nature.jpg)">
+    <div class="shadow-lg">
+        <header class="text-center container mx-auto">
+            <div class="grid grid-cols-3 gap-2">
+                <input type="text" name="" placeholder="Search for a City" id="city" class="bg-white/50 text-black uppercase text-bold col-span-2 text-center rounded-lg p-2">
+                <input type="submit" value="Search" id="btn" class="col-span-1 bg-blue-400 rounded border-2 border-blue-300 hover:border-blue-200"></input>
             </div>
-            <div class="text-gray-200 text-sm">
-                <p>Humidity is the concentration of water vapour present in the air.</p>
+            <div class="bg-blue-500/25 h-screen">
+                <div>
+                    <p class="text-4xl p-2" id="locations">--</p>
+                    <p class="text-gray-300" id="date">Thu 5 December 8:41am</p>
+                </div>
+                <div>
+                    <h1 class="leading-normal text-[6rem]">
+                        <i id="icon"></i>
+                        <p id="temperature">28.7</p>
+                    </h1>
+                </div>
+                <div class="text-xl">
+                    <p id="feels-like" class="p-2">--</p>
+                    <p id="weather-description">--</p>
+                </div>
+                <div class="p-4">
+                    <img src="" alt="" id="icon">icon
+                </div>
+            </div>
+        </header>
+    
+        <!-- <section class="bg-gray-200/25 md:text-center mt-8 container mx-auto">
+            <div class="px-20 rounded-lg text-xl grid grid-cols-1 md:grid-cols-2">
+                <p>Humidity: <span id="humidity">--</span></p>
+                <p>Wind: <span id="wind">--</span></p>
+                <p>Pressure: <span id="pressure">--</span></p>
+                <p>Country: <span id="country">--</span></p>
+                
+            </div>
+        </section> -->
+    
+        <!-- <div class="container mx-auto text-center">
+            <div class="bg-blue-400 rounded h-full">
+                <div class="">
+                    <p class="text-md font-semibold tracking-widest">HUMIDITY</p><span class="text-xl font-semibold" id="humidity">--</span>
+                </div>
+                <div class="text-gray-200 text-sm">
+                    <p>Humidity is the concentration of water vapour present in the air.</p>
+                </div>
+            </div>
+    
+            <div class="bg-gray-100 rounded text-black">
+                <div class="">
+                    <p class="text-md font-semibold tracking-widest">PRESSURE</p><span class="text-xl font-semibold" id="pressure">--</span>
+                </div>
+                <div class="text-sm">
+                    <p>Atmospheric pressure, also known as barometric pressure, is the pressure within the atmosphere of Earth.</p>
+                </div>
+            </div>
+    
+            <div class="bg-[#8DB4F3] rounded">
+                <div class="">
+                    <p class="text-md font-semibold tracking-widest">WIND</p><span class="text-xl font-semibold" id="wind">--</span>
+                </div>
+                <div class="text-gray-200 text-sm">
+                    <p>Wind is air in motion. It is produced by the uneven heating of the earth's surface by the sun.</p>
+                </div>
+            </div>
+    
+            <div class="bg-purple-400 rounded">
+                <div class="">
+                    <p class="text-md font-semibold tracking-widest">COUNTRY</p><span class="text-xl font-semibold" id="country">--</span>
+                </div>
+                <div class="text-gray-200 text-sm">
+                    <p>Humidity is the concentration of water vapour present in the air.</p>
+                </div>
             </div>
         </div>
-
-        <div class="bg-gray-100 rounded text-black">
-            <div class="">
-                <p class="text-md font-semibold tracking-widest">PRESSURE</p><span class="text-xl font-semibold" id="pressure">--</span>
-            </div>
-            <div class="text-sm">
-                <p>Atmospheric pressure, also known as barometric pressure, is the pressure within the atmosphere of Earth.</p>
-            </div>
-        </div>
-
-        <div class="bg-[#8DB4F3] rounded">
-            <div class="">
-                <p class="text-md font-semibold tracking-widest">WIND</p><span class="text-xl font-semibold" id="wind">--</span>
-            </div>
-            <div class="text-gray-200 text-sm">
-                <p>Wind is air in motion. It is produced by the uneven heating of the earth's surface by the sun.</p>
-            </div>
-        </div>
-
-        <div class="bg-purple-400 rounded">
-            <div class="">
-                <p class="text-md font-semibold tracking-widest">COUNTRY</p><span class="text-xl font-semibold" id="country">--</span>
-            </div>
-            <div class="text-gray-200 text-sm">
-                <p>Humidity is the concentration of water vapour present in the air.</p>
-            </div>
-        </div>
-    </div>
+    </div> -->
 
 
 
