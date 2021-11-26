@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="./build/styles.css">
     <title>Weather-App</title>
 </head>
-<body class="text-white font-nunito max-w-6xl mx-auto px-1 pt-2 bg-auto bg-no-repeat bg-center bg-cover" style="background-image: url(./src/img/nature.jpg)">
-    <div class="shadow-lg">
-        <header class="text-center container mx-auto">
+<body class="text-white font-nunito max-w-6xl mx-auto px-1 pt-2 bg-auto bg-no-repeat bg-center bg-cover overflow:visible" style="background-image: url(./src/img/nature.jpg)">
+    <div class="shadow-lg py-auto">
+        <header class="text-center container mt-auto">
             <div class="grid grid-cols-3 gap-2">
                 <input type="text" name="" placeholder="Search for a City" id="city" class="bg-white/50 text-black uppercase text-bold col-span-2 text-center rounded-lg p-2">
                 <input type="submit" value="Search" id="btn" class="col-span-1 bg-blue-400 rounded border-2 border-blue-300 hover:border-blue-200"></input>
             </div>
-            <div class="bg-blue-500/25 h-screen">
+            <div class="bg-blue-500/25 h-screen mb-auto">
                 <div>
                     <p class="text-4xl p-2" id="locations">--</p>
                     <p class="text-gray-300" id="date">Thu 5 December 8:41am</p>
@@ -32,7 +32,17 @@
                 <div class="p-4">
                     <img src="" alt="" id="icon">icon
                 </div>
+                <div class="p-4 text-xl">
+                    <p>Humidity: <span id="humidity">--</span></p>
+                    <p>Pressure: <span id="pressure">--</span></p>
+                    <p>Wind: <span id="wind">--</span></p>
+                    <p>Country: <span id="country">--</span></p>
+                </div>
             </div>
+
+            
+            
+            
         </header>
     
         <!-- <section class="bg-gray-200/25 md:text-center mt-8 container mx-auto">
