@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="./build/styles.css">
     <title>Weather-App</title>
 </head>
-<body class="text-white font-nunito max-w-6xl mx-auto px-1 pt-2 bg-auto bg-no-repeat bg-center bg-cover overflow:visible" style="background-image: url(./src/img/nature.jpg)">
-    <div class="shadow-lg py-auto">
+<body class="h-screen text-white font-nunito max-w-6xl mx-auto px-1 pt-2 bg-auto bg-no-repeat bg-center bg-cover overflow:visible" style="background-image: url(./src/img/nature.jpg)">
+    <div class="shadow-lg">
         <header class="text-center container mt-auto">
             <div class="grid grid-cols-3 gap-2">
                 <input type="text" name="" placeholder="Search for a City" id="city" class="bg-white/50 text-black uppercase text-bold col-span-2 text-center rounded-lg p-2">
@@ -21,16 +21,16 @@
                 </div>
                 <div>
                     <h1 class="leading-normal text-[6rem]">
-                        <i id="icon"></i>
-                        <p id="temperature">28.7</p>
+                        <p id="temperature">--</p>
                     </h1>
                 </div>
                 <div class="text-xl">
                     <p id="feels-like" class="p-2">--</p>
                     <p id="weather-description">--</p>
                 </div>
-                <div class="p-4">
-                    <img src="" alt="" id="icon">icon
+                <!-- icon -->
+                <div class="p-4 flex justify-center" id="icon">
+                    <img src="" alt="" id="">
                 </div>
                 <div class="p-4 text-xl">
                     <p>Humidity: <span id="humidity">--</span></p>

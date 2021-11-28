@@ -11,6 +11,8 @@ let wind = document.querySelector('#wind');
 let country = document.querySelector('#country');
 let pressure = document.querySelector('#pressure');
 
+console.log(icon)
+
 
 
 
@@ -35,10 +37,11 @@ btn.addEventListener('click', function(data){
         let windData = data['wind']['speed'];
         let countryData = data['sys']['country'];
         let pressureData = data['main']['pressure'];
-        // let iconData = data['main']['0']['icon'];
+        let iconCode = data['weather']['0']['icon'];
         
         
-
+        
+        icon.innerHTML = ` <img src="https://openweathermap.org/img/wn/${iconCode}@4x.png" alt="" id="">`;
         temperature.innerHTML = temperatureData.toUpperCase();
         feelsLike.innerHTML = feelsLikeData;
         weatherDescription.innerHTML = weatherDescriptionData.toUpperCase();
@@ -58,3 +61,4 @@ btn.addEventListener('click', function(data){
 })
 
 console.log('https://api.openweathermap.org/data/2.5/weather?q=london&appid=dc0b2d1eb4fa8ffcf52f194470748c73')
+// https://openweathermap.org/img/wn/11d@2x.png
