@@ -600,9 +600,6 @@ video {
 *, ::before, ::after{
   --tw-border-opacity: 1;
   border-color: rgba(229, 231, 235, var(--tw-border-opacity));
-  --tw-ring-offset-shadow: 0 0 #0000;
-  --tw-ring-shadow: 0 0 #0000;
-  --tw-shadow: 0 0 #0000;
 }
 
 .container{
@@ -639,10 +636,6 @@ video {
   }
 }
 
-.relative{
-  position: relative;
-}
-
 .col-span-2{
   grid-column: span 2 / span 2;
 }
@@ -656,12 +649,12 @@ video {
   margin-right: auto;
 }
 
-.mt-auto{
-  margin-top: auto;
+.mt-2{
+  margin-top: 0.5rem;
 }
 
-.mb-auto{
-  margin-bottom: auto;
+.mt-auto{
+  margin-top: auto;
 }
 
 .mt-8{
@@ -674,10 +667,6 @@ video {
 
 .grid{
   display: grid;
-}
-
-.hidden{
-  display: none;
 }
 
 .h-screen{
@@ -729,17 +718,18 @@ video {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-.bg-blue-400{
+.bg-\[\#59C4F9\]{
   --tw-bg-opacity: 1;
-  background-color: rgba(96, 165, 250, var(--tw-bg-opacity));
-}
-
-.bg-blue-500\/25{
-  background-color: rgba(59, 130, 246, 0.25);
+  background-color: rgba(89, 196, 249, var(--tw-bg-opacity));
 }
 
 .bg-gray-200\/25{
   background-color: rgba(229, 231, 235, 0.25);
+}
+
+.bg-blue-400{
+  --tw-bg-opacity: 1;
+  background-color: rgba(96, 165, 250, var(--tw-bg-opacity));
 }
 
 .bg-gray-100{
@@ -755,10 +745,6 @@ video {
 .bg-purple-400{
   --tw-bg-opacity: 1;
   background-color: rgba(167, 139, 250, var(--tw-bg-opacity));
-}
-
-.bg-auto{
-  background-size: auto;
 }
 
 .bg-cover{
@@ -791,16 +777,8 @@ video {
   padding-right: 5rem;
 }
 
-.pt-2{
-  padding-top: 0.5rem;
-}
-
 .text-center{
   text-align: center;
-}
-
-.align-middle{
-  vertical-align: middle;
 }
 
 .text-4xl{
@@ -848,19 +826,19 @@ video {
   color: rgba(0, 0, 0, var(--tw-text-opacity));
 }
 
-.text-gray-300{
+.text-gray-100{
   --tw-text-opacity: 1;
-  color: rgba(209, 213, 219, var(--tw-text-opacity));
+  color: rgba(243, 244, 246, var(--tw-text-opacity));
+}
+
+.text-gray-700{
+  --tw-text-opacity: 1;
+  color: rgba(55, 65, 81, var(--tw-text-opacity));
 }
 
 .text-gray-200{
   --tw-text-opacity: 1;
   color: rgba(229, 231, 235, var(--tw-text-opacity));
-}
-
-.shadow-lg{
-  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .hover\:border-blue-200:hover{

@@ -21,11 +21,31 @@ btn.addEventListener('click', function(data){
     .then(response => response.json())
     .then(data => {
         // date
-        var today = new Date();
-        var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-        var dateTime = date+' '+time;
-        dates.innerHTML = dateTime;
+        // var today = new Date();
+        // var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+        // var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        // var dateTime = date+' '+time;
+        // dates.innerHTML = dateTime;
+
+        var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "December"];
+        var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        var d = new Date();
+        var day = days[d.getDay()];
+        var hr = d.getHours();
+        var min = d.getMinutes();
+        if (min < 10) {
+            min = "0" + min;
+        }
+        var ampm = "am";
+        if( hr > 12 ) {
+            hr -= 12;
+            ampm = "pm";
+        }
+        var date = d.getDate();
+        var month = months[d.getMonth()];   
+        var year = d.getFullYear();
+        var x = document.getElementById("time");
+        dates.innerHTML = month + " " + date + ", " + year +"<br>"+ day + " "  + " " + hr + ":" + min + ampm;
 
 
 
@@ -41,7 +61,7 @@ btn.addEventListener('click', function(data){
         
         
         
-        icon.innerHTML = ` <img src="https://openweathermap.org/img/wn/${iconCode}@4x.png" alt="" id="">`;
+        icon.innerHTML = ` <img src="https://openweathermap.org/img/wn/${iconCode}@2x.png" alt="" id="">`;
         temperature.innerHTML = temperatureData.toUpperCase();
         feelsLike.innerHTML = feelsLikeData;
         weatherDescription.innerHTML = weatherDescriptionData.toUpperCase();
