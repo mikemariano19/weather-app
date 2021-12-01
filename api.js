@@ -20,13 +20,6 @@ btn.addEventListener('click', function(data){
     fetch('https://api.openweathermap.org/data/2.5/weather?q='+city.value+'&appid=dc0b2d1eb4fa8ffcf52f194470748c73')
     .then(response => response.json())
     .then(data => {
-        // date
-        // var today = new Date();
-        // var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-        // var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-        // var dateTime = date+' '+time;
-        // dates.innerHTML = dateTime;
-
         var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "December"];
         var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         var d = new Date();
@@ -70,7 +63,6 @@ btn.addEventListener('click', function(data){
         wind.innerHTML = windData;
         country.innerHTML = countryData;
         pressure.innerHTML = pressureData;
-        // icon.innerHTML = 'http://openweathermap.org/img/wn/'+iconData+'.png';
 
         
         
@@ -79,6 +71,3 @@ btn.addEventListener('click', function(data){
     
     .catch(err => alert('Invalid City!'))
 })
-
-console.log('https://api.openweathermap.org/data/2.5/weather?q=london&appid=dc0b2d1eb4fa8ffcf52f194470748c73')
-// https://openweathermap.org/img/wn/11d@2x.png
